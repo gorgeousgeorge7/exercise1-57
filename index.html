@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>first exercise</title>
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <form class="my-form">
+        <input type="text" placeholder="enter your name" name="my-input"><br>
+        <button>Submit</button>
+    </form>
+      
+    <script>
+        let form = document.querySelector(".my-form");
+
+        form.addEventListener("submit", function (e) {
+        e.preventDefault() // This prevents the window from reloading
+        
+        let formdata = new FormData(this);
+        let input = formdata.get("my-input");
+
+        alert("hello " + input + " nice to meet you");
+        });
+    </script>
+ 
+  </body>
+</html>
